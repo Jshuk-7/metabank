@@ -1,4 +1,4 @@
-project "Core"
+project "metabank"
    kind "StaticLib"
    language "C++"
    cppdialect "C++20"
@@ -20,18 +20,18 @@ project "Core"
        defines { }
 
    filter "configurations:Debug"
-       defines { "DEBUG" }
+       defines { "MB_DEBUG" }
        runtime "Debug"
        symbols "On"
 
    filter "configurations:Release"
-       defines { "RELEASE" }
+       defines { "MB_RELEASE" }
        runtime "Release"
        optimize "On"
        symbols "On"
 
    filter "configurations:Dist"
-       defines { "DIST" }
+       defines { "MB_DIST" }
        runtime "Release"
        optimize "On"
        symbols "Off"

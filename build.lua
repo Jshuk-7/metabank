@@ -1,7 +1,6 @@
-workspace "PROJECT_NAME"
+workspace "metabank"
     architecture "x64"
     configurations { "Debug", "Release", "Dist" }
-    startproject "App"
     
     -- Workspace wide build options for MSVC
     filter "system:windows"
@@ -9,8 +8,5 @@ workspace "PROJECT_NAME"
 
 OutputDir = "%{cfg.system}-%{cfg.architecture}/%{cfg.buildcfg}"
 
-group "Core"
-    include "Core/build-core.lua"
-group ""
-
-include "App/build-app.lua"
+include "metabank/build-metabank.lua"
+include "testbed/build-testbed.lua"

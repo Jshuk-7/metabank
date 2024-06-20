@@ -1,10 +1,10 @@
-#include "Core.h"
+#include "metabank.h"
 
 #include <iostream>
 
-namespace Core {
+namespace metabank {
 
-	void Test()
+	void test()
 	{
 		std::cout << "Hello, World!\n";
 		std::cin.get();
